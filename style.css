@@ -1,0 +1,672 @@
+
+/* =========================================
+   MATHEMATICS WITH MISS MHLONGO
+   Main Website Styles
+   Colours: Navy, Gold, Cream and White
+========================================= */
+
+/* COLOUR PALETTE */
+:root {
+    --navy: #142744;
+    --navy-light: #203b60;
+    --gold: #d4af61;
+    --cream: #faf8f2;
+    --white: #ffffff;
+    --text: #263247;
+    --muted: #687386;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+/* =========================================
+   HEADER AND NAVIGATION
+========================================= */
+
+.site-header {
+    background: var(--navy);
+    color: var(--white);
+    border-bottom: 3px solid var(--gold);
+    position: relative;
+    z-index: 100;
+}
+
+.navbar {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.brand span {
+    display: block;
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--gold);
+}
+
+.nav-links .nav-apply {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 9px 16px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.nav-links .nav-apply:hover {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.menu-toggle {
+    display: none;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--white);
+    padding: 7px 11px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding: 75px 0;
+}
+
+.section-white {
+    background: var(--white);
+}
+
+.section-navy {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.section h2 {
+    color: var(--navy);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.section-navy h2 {
+    color: var(--white);
+}
+
+.section p {
+    margin-bottom: 16px;
+}
+
+.section-intro {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #96742c;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* =========================================
+   HOME PAGE HERO
+========================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            115deg,
+            rgba(20, 39, 68, 0.98),
+            rgba(32, 59, 96, 0.93)
+        );
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 680px;
+    font-size: 1.1rem;
+    color: #f0f2f6;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+/* =========================================
+   PAGE HEADINGS
+========================================= */
+
+.page-heading {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 65px 20px;
+    border-bottom: 4px solid var(--gold);
+}
+
+.page-heading h1 {
+    color: var(--white);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.page-heading p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e7ebf1;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    padding: 12px 23px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--navy);
+}
+
+.button-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--gold);
+}
+
+.button-outline:hover,
+.button-outline:focus-visible {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+.button-navy {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+}
+
+.button-navy:hover,
+.button-navy:focus-visible {
+    background: var(--navy-light);
+    border-color: var(--navy-light);
+    color: var(--white);
+}
+
+/* =========================================
+   CARDS AND SUBJECT GRIDS
+========================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 32px;
+}
+
+.card {
+    background: var(--white);
+    padding: 27px;
+    border: 1px solid #e7e4dc;
+    border-top: 4px solid var(--gold);
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(20, 39, 68, 0.06);
+}
+
+.card h3 {
+    color: var(--navy);
+    font-size: 1.2rem;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.card-link {
+    display: inline-block;
+    color: #80601e;
+    font-weight: 700;
+}
+
+.card-link:hover {
+    color: var(--navy);
+    text-decoration: underline;
+}
+
+/* =========================================
+   ABOUT PAGE — TUTOR PHOTO BACKGROUND
+========================================= */
+
+.about-background {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+/* Photo sits behind the section content */
+.about-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(
+            rgba(250, 248, 242, 0.50),
+            rgba(250, 248, 242, 0.65)
+        ),
+        url("images/miss-mhlongo.jpg");
+
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+
+    opacity: 1;
+}
+
+/* Keep content above the photo */
+.about-background .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Keep cards easy to read */
+.about-background .card {
+    background: rgba(255, 255, 255, 0.93);
+    backdrop-filter: blur(3px);
+}
+
+/* =========================================
+   APPLICATION PAGE
+========================================= */
+
+.application-panel {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background: var(--white);
+    border: 1px solid #e7e4dc;
+    border-top: 5px solid var(--gold);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(20, 39, 68, 0.07);
+}
+
+.application-panel h2 {
+    margin-bottom: 15px;
+}
+
+.application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.application-form label {
+    display: block;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd1db;
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--text);
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+    border-color: var(--navy);
+}
+
+.application-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Embedded external application form */
+.application-embed {
+    width: 100%;
+    min-height: 850px;
+    border: none;
+    border-radius: 6px;
+    background: var(--white);
+}
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.cta-section {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 65px 20px;
+    border-top: 4px solid var(--gold);
+}
+
+.cta-section h2 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #e7ebf1;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #0d1b30;
+    color: var(--white);
+    padding: 35px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.footer-brand {
+    color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.site-footer p {
+    color: #d3dae5;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   TABLETS AND MOBILE DEVICES
+========================================= */
+
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        min-height: 74px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 8px;
+    }
+
+    .nav-links .nav-apply {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .page-heading {
+        padding: 50px 18px;
+    }
+
+    .application-panel {
+        padding: 23px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .application-panel {
+        padding: 18px;
+    }
+
+    .brand {
+        font-size: 1rem;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
